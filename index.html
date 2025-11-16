@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javascript Library</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  
+  <div id="wrapper">
+    <header>
+      <h1>Javascript Library</h1>
+      <button id="create">Add Book</button>
+      <button id="delete-all">Delete All</button>
+    </header>
+    <main>
+      <div class="book" data-id="1">
+        <span class="title">Example</span>
+        <span class="description">Click "Add Book" to begin...</span>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
