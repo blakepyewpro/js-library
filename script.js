@@ -44,14 +44,32 @@ function Book(title, description, isExample = false) {
     statusButton.textContent = "Read";
     buttons.appendChild(statusButton);
 
+    statusButton.addEventListener("click", () => {
+      if (book.dataset.status === "unread") {
+        book.dataset.status = "read";
+        status.textContent = "Read";
+        statusButton.textContent = "Unread";
+      } else if (book.dataset.status === "read") {
+        book.dataset.status = "unread";
+        status.textContent = "Unread";
+        statusButton.textContent = "Read";
+      }
+    });
+
     const deleteButton = document.createElement("button");
     deleteButton.setAttribute("class", "delete");
     deleteButton.textContent = "Delete";
     buttons.appendChild(deleteButton);
 
+    deleteButton.addEventListener("click", () => {this.deleteSelf();})
+
     displayArea.appendChild(book);
   }
   this.deleteSelf = function() {
-    //TODO
+    const selfElement = document.querySelector(`[data-id="${this.id}"]`)
+    selfElement.remove();
   }
 }
+
+const testBook = new Book("2nd Example", "Words go here");
+testBook.addToDisplayArea();
