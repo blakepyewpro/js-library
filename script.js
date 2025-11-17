@@ -1,6 +1,11 @@
 const library = [];
 const displayArea = document.querySelector("main");
 
+const addBookButton = document.querySelector("button#create");
+
+const deleteAllButton = document.querySelector("button#delete-all");
+deleteAllButton.addEventListener("click", () => deleteLibrary());
+
 function Book(title, description, isExample = false) {
   this.title = title;
   this.description = description;
@@ -66,10 +71,25 @@ function Book(title, description, isExample = false) {
     displayArea.appendChild(book);
   }
   this.deleteSelf = function() {
-    const selfElement = document.querySelector(`[data-id="${this.id}"]`)
+    const selfElement = document.querySelector(`[data-id="${this.id}"]`);
     selfElement.remove();
+    const libIndex = library.findIndex(element => element.id === this.id)
+    if (libIndex > -1) {
+      console.log("removing book id: " + library[libIndex].id);
+      library.splice(libIndex, 1);
+    }
   }
 }
 
-const testBook = new Book("2nd Example", "Words go here");
-testBook.addToDisplayArea();
+function addBookToLibrary(title, description) {
+  const addedBook = new Book(title, description);
+  addedBook.addToDisplayArea();
+  library.push(addedBook);
+  console.log("added book id: " + library.at(-1).id);
+}
+
+function deleteLibrary() {
+  library.forEach((book) => book.deleteSelf());
+}
+
+addBookToLibrary("Test Add Function", "Lorem Ipsum et cetera... words go brr...")
