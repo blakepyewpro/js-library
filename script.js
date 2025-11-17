@@ -25,6 +25,11 @@ function Book(title, description, isExample = false) {
     title.textContent = this.title;
     text.appendChild(title);
 
+    const status = document.createElement("span");
+    status.setAttribute("class", "status");
+    status.textContent = "Unread";
+    text.appendChild(status);
+
     const description = document.createElement("span");
     description.setAttribute("class", "description");
     description.textContent = this.description;
@@ -36,7 +41,7 @@ function Book(title, description, isExample = false) {
     
     const statusButton = document.createElement("button");
     statusButton.setAttribute("class", "status");
-    statusButton.textContent = "Mark as Read";
+    statusButton.textContent = "Read";
     buttons.appendChild(statusButton);
 
     const deleteButton = document.createElement("button");

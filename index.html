@@ -11,17 +11,20 @@
   <div id="wrapper">
     <header>
       <h1>Javascript Library</h1>
-      <button id="create">Add Book</button>
-      <button id="delete-all">Delete All</button>
+      <div id="header-buttons">
+        <button id="create">Add Book</button>
+        <button id="delete-all">Delete All</button>
+      </div>
     </header>
     <main>
       <div class="book" data-id="1" data-status="unread">
         <div class="book-text">
           <span class="title">Example</span>
+          <span class="status">Unread</span>
           <span class="description">Click "Add Book" to begin...</span>
         </div>
         <div class="book-buttons">
-          <button class="status">Mark as Read</button>
+          <button class="status">Read</button>
           <button class="delete">Delete</button>
         </div>
       </div>
