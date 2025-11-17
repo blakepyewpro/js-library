@@ -1,0 +1,133 @@
+/* Palette: https://www.happyhues.co/palettes/3 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fffffe;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#wrapper {
+    background-color: #d8eefe;
+    border: 4px #094067 solid;
+    width: 66vw;
+    margin: 20px;
+    min-height: calc(100vh - 40px);
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+header {
+    color: #094067;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+div#header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    border: 2px solid #094067;
+    border-radius: 5px;
+    padding: 4px;
+    color: #094067;
+    font-size: 1rem;
+}
+
+div#header-buttons button {
+    background-color: #d8eefe;
+}
+
+div#header-buttons button:hover {
+    background-color: #90b4ce;
+}
+
+div#header-buttons button:active {
+    background-color: #d8eefe;
+
+}
+
+main {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+div.book {
+    background-color: #fffffe;
+    min-height: 150px;
+    padding: 10px;
+    border: 2px solid #094067;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.book-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+span.title, span.status {
+    color: #094067;
+}
+
+span.title {
+    font-weight: bolder;
+}
+
+span.status {
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+span.description {
+    font-size: 0.75rem;
+    color: #5f6c7b;
+}
+
+div.book-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+div.book-buttons button {
+    background-color: #fffffe;
+    font-size: 0.85rem;
+}
+
+div.book-buttons button:hover {
+    background-color: #d8eefe;
+}
+
+div.book-buttons button:active {
+    background-color: #fffffe;
+}
