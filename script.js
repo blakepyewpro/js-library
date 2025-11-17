@@ -11,32 +11,40 @@ function Book(title, description, isExample = false) {
   }
 
   this.addToDisplayArea = function() {
-    const thisBook = document.createElement("div");
-    thisBook.setAttribute("class", "book")
-    thisBook.dataset.id = this.id;
-    thisBook.dataset.status = "unread";
+    const book = document.createElement("div");
+    book.setAttribute("class", "book")
+    book.dataset.id = this.id;
+    book.dataset.status = "unread";
 
-    const thisTitle = document.createElement("span");
-    thisTitle.setAttribute("class", "title");
-    thisTitle.textContent = this.title;
-    thisBook.appendChild(thisTitle);
+    const text = document.createElement("div");
+    text.setAttribute("class", "book-text");
+    book.appendChild(text);
 
-    const thisDescription = document.createElement("span");
-    thisDescription.setAttribute("class", "description");
-    thisDescription.textContent = this.description;
-    thisBook.appendChild(thisDescription);
+    const title = document.createElement("span");
+    title.setAttribute("class", "title");
+    title.textContent = this.title;
+    text.appendChild(title);
+
+    const description = document.createElement("span");
+    description.setAttribute("class", "description");
+    description.textContent = this.description;
+    text.appendChild(description);
+
+    const buttons = document.createElement("div");
+    buttons.setAttribute("class", "book-buttons");
+    book.appendChild(buttons);
     
-    const thisStatusButton = document.createElement("button");
-    thisStatusButton.setAttribute("class", "status");
-    thisStatusButton.textContent = "Mark as Read";
-    thisBook.appendChild(thisStatusButton);
+    const statusButton = document.createElement("button");
+    statusButton.setAttribute("class", "status");
+    statusButton.textContent = "Mark as Read";
+    buttons.appendChild(statusButton);
 
-    const thisDeleteButton = document.createElement("button");
-    thisDeleteButton.setAttribute("class", "delete");
-    thisDeleteButton.textContent = "Delete";
-    thisBook.appendChild(thisDeleteButton);
+    const deleteButton = document.createElement("button");
+    deleteButton.setAttribute("class", "delete");
+    deleteButton.textContent = "Delete";
+    buttons.appendChild(deleteButton);
 
-    displayArea.appendChild(thisBook);
+    displayArea.appendChild(book);
   }
   this.deleteSelf = function() {
     //TODO
