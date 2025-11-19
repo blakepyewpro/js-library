@@ -133,7 +133,7 @@ div.book-buttons button:active {
 }
 
 dialog {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -142,7 +142,9 @@ dialog {
     border: 4px #094067 solid;
     border-radius: 10px;
     min-height: 150px;
+}
 
+#dialog-content {
     display: flex;
     flex-direction: column;
 }
