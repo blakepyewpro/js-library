@@ -60,7 +60,7 @@ div#header-buttons button {
 }
 
 div#header-buttons button:hover {
-    background-color: #90b4ce;
+    background-color: #fffffe;
 }
 
 div#header-buttons button:active {
@@ -130,4 +130,61 @@ div.book-buttons button:hover {
 
 div.book-buttons button:active {
     background-color: #fffffe;
+}
+
+dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #d8eefe;
+    border: 4px #094067 solid;
+    border-radius: 10px;
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form-input label {
+    color: #094067;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.form-input input {
+    border-radius: 5px;
+    border: 2px solid #094067;
+    padding: 2px 5px;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.form-buttons button {
+    background-color: #d8eefe;
+}
+
+.form-buttons button:hover {
+    background-color: #fffffe;
+}
+
+.form-buttons button:active {
+    background-color: #d8eefe;
 }
