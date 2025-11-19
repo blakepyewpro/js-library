@@ -17,34 +17,25 @@
       </div>
     </header>
     <main>
-      <div class="book" data-id="1" data-status="unread">
-        <div class="book-text">
-          <span class="title">Example</span>
-          <span class="status">Unread</span>
-          <span class="description">Click "Add Book" to begin...</span>
-        </div>
-        <div class="book-buttons">
-          <button class="status">Read</button>
-          <button class="delete">Delete</button>
-        </div>
-      </div>
     </main>
   </div>
-  <dialog open>
-    <form method="dialog">
-      <div class="form-input">
-        <label for="title">TITLE</label>
-        <input type="text" name="title" id="title">
-      </div>
-      <div class="form-input">
-        <label for="description">DESCRIPTION</label>
-        <input type="text" name="description" id="description">
-      </div>
-      <div class="form-buttons">
-        <button type="submit">Confirm</button>
-        <button type="reset">Cancel</button>
-      </div>
-    </form>
+  <dialog>
+    <div id="dialog-content">
+      <form method="dialog">
+        <div class="form-input">
+          <label for="title">TITLE</label>
+          <input type="text" name="title" id="title">
+        </div>
+        <div class="form-input">
+          <label for="description">DESCRIPTION</label>
+          <input type="text" name="description" id="description">
+        </div>
+        <div class="form-buttons">
+          <button type="submit">Confirm</button>
+          <button type="reset">Cancel</button>
+        </div>
+      </form>
+    </div>
   </dialog>
 </body>
 </html>
